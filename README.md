@@ -22,6 +22,10 @@ Este projeto tem como objetivo consolidar conhecimentos básicos em **CRUD** (Cr
 
 ## 🛠️ Versionamento
 
+### v1.2 - Refinamento e lógica inicial
+- Melhorias no código de renderização (`render.js`).
+- Lógica do inicial do programa (`app.js`).
+
 ### v1.1 - Estrutura e Renderização
 - Criação da classe de modelo da tarefa (`task.js`).
 - Implementação da função de renderização (`render.js`).
