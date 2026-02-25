@@ -5,29 +5,25 @@ export function render(taskList, list) {
 
     list.forEach((task) => {
         const $div = document.createElement('div');
-        $div.className = 'taskView';
 
         const $title = document.createElement('h3');
         $title.textContent = task.title;
-
+        
         const $description = document.createElement('p');
         $description.textContent = task.description;
-
-        const $importance = document.createElement('p');
-        $importance.textContent = task.importance;
 
         const $data = document.createElement('p');
         $data.textContent = task.data;
 
         const $buttonDelete = document.createElement('button');
-        $buttonDelete.id = list.length;
+        $buttonDelete.className = 'delete_button'
         $buttonDelete.textContent = "Delete"
 
-
+        $div.className = 'taskView';
         $div.id = list.length;
+        
         $div.appendChild($title);
         $div.appendChild($description);
-        $div.appendChild($importance);
         $div.appendChild($data);
         $div.appendChild($buttonDelete);
 

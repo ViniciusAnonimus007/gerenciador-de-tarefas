@@ -21,6 +21,9 @@ Este projeto tem como objetivo consolidar conhecimentos básicos em **CRUD** (Cr
 - `app.js` (ou principal): Lógica do CRUD.
 
 ## 🛠️ Versionamento
+### v1.4 - Funcionalidade de deletar
+- Lógica para deleção da tarefa (`app.js`).
+- Refatoração de Lógica (`render.js`).
 
 ### v1.3 - Teste da Funcionalidade de renderização
 - Código de renderização testado e funcionando (`render.js`).
