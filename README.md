@@ -22,6 +22,10 @@ Este projeto tem como objetivo consolidar conhecimentos básicos em **CRUD** (Cr
 
 ## 🛠️ Versionamento
 
+### v1.3 - Teste da Funcionalidade de renderização
+- Código de renderização testado e funcionando (`render.js`).
+- Layout inicial (`index.js`).
+
 ### v1.2 - Refinamento e lógica inicial
 - Melhorias no código de renderização (`render.js`).
 - Lógica do inicial do programa (`app.js`).

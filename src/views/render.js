@@ -21,6 +21,7 @@ export function render(taskList, list) {
 
         const $buttonDelete = document.createElement('button');
         $buttonDelete.id = list.length;
+        $buttonDelete.textContent = "Delete"
 
 
         $div.id = list.length;
