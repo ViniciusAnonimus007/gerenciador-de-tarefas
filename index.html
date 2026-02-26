@@ -16,6 +16,37 @@
       
     </section>
     
+    <section class="container_create">
+      <div class="task_create_container">
+        <div class="task_create">
+          <div id="task_title">
+            
+            <label for="title">Titulo</label>
+            <input type="text" name="title" id="title" placeholder="Digite o Título"/>
+        
+          </div>
+          
+          <div id="task_description">
+            <label for="description">Descrição</label>
+            <input type="text" name="description" id="description" placeholder="Digite a descrição">
+            
+          </div>
+          
+          <div id="task_importance">
+            <label for="importance">Urgência </label>
+            <select name="importance" id="importance">
+              <option value="low">Baixa</option>
+              <option value="mid">Média</option>
+              <option value="high">Alta</option>
+            </select>
+            
+          </div>
+        </div>
+        
+        <button id="create_button">Criar</button>
+      </div>
+    </section>
+    
   </main>
   <script src="./src/app.js" type="module"></script>
 </body>

@@ -22,6 +22,12 @@ Este projeto tem como objetivo consolidar conhecimentos básicos em **CRUD** (Cr
 
 ## 🛠️ Versionamento
 
+### v1.5.0 - Funcionalidade de criar
+- Funcionalidade para criação de novas tarefas.
+- Refatoração de Lógica (`app.js`).
+- Novo arquivo dedicado a criação da tarefa (`taskCreate.js`).
+- Layout da página principal atualizado
+
 ### v1.4.1 - Correção de bug 
 - Bug ao clicar na área da tarefa que apagava tudo, sem necessidade de apertar 'delete' (`app.js`).
 

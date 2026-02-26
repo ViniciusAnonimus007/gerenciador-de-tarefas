@@ -1,8 +1,9 @@
 import Task from './models/task.js';
 import { render } from './views/render.js';
+import { taskCreate } from './controller/taskCreate.js';
 
-const taskContainer = document.querySelector('.tasks_container');
-const $buttonDelete = document.querySelectorAll('.delete_button');
+const $taskContainer = document.querySelector('.tasks_container');
+const $createButton = document.querySelector('#create_button')
 
 let list = [
   {
@@ -19,10 +20,20 @@ let list = [
   }
 ]
 
-render(taskContainer, list);
+render($taskContainer, list);
 
-taskContainer.addEventListener('click', (e) => {
+$taskContainer.addEventListener('click', (e) => {
   if (e.target.classList.contains('delete_button')) {
     e.target.parentElement.remove();
   }
 });
+
+
+$createButton.addEventListener('click', () =>{
+  const title = document.querySelector('#title').value;
+  const description = document.querySelector('#description').value;
+  const importance = document.querySelector('#importance').value;
+  
+  taskCreate($taskContainer, list, title, description, importance);
+  
+})
