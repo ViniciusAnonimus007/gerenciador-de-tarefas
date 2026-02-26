@@ -21,6 +21,10 @@ Este projeto tem como objetivo consolidar conhecimentos básicos em **CRUD** (Cr
 - `app.js` (ou principal): Lógica do CRUD.
 
 ## 🛠️ Versionamento
+
+### v1.4.1 - Correção de bug 
+- Bug ao clicar na área da tarefa que apagava tudo, sem necessidade de apertar 'delete' (`app.js`).
+
 ### v1.4 - Funcionalidade de deletar
 - Lógica para deleção da tarefa (`app.js`).
 - Refatoração de Lógica (`render.js`).

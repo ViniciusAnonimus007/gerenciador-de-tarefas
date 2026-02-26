@@ -16,12 +16,11 @@ export function render(taskList, list) {
         $data.textContent = task.data;
 
         const $buttonDelete = document.createElement('button');
-        $buttonDelete.className = 'delete_button'
-        $buttonDelete.textContent = "Delete"
+        $buttonDelete.className = 'delete_button';
+        $buttonDelete.textContent = 'Delete';
 
         $div.className = 'taskView';
-        $div.id = list.length;
-        
+
         $div.appendChild($title);
         $div.appendChild($description);
         $div.appendChild($data);

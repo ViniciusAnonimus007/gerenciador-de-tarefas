@@ -2,7 +2,7 @@ import Task from './models/task.js';
 import { render } from './views/render.js';
 
 const taskContainer = document.querySelector('.tasks_container');
-
+const $buttonDelete = document.querySelectorAll('.delete_button');
 
 let list = [
   {
@@ -22,5 +22,7 @@ let list = [
 render(taskContainer, list);
 
 taskContainer.addEventListener('click', (e) => {
-  e.target.parentNode.remove();
-})
+  if (e.target.classList.contains('delete_button')) {
+    e.target.parentElement.remove();
+  }
+});
