@@ -22,6 +22,11 @@ Este projeto tem como objetivo consolidar conhecimentos básicos em **CRUD** (Cr
 
 ## 🛠️ Versionamento
 
+### v1.6.0 - IU/UX Layout Profisório
+- Formatação da página usando css.
+- Semântica da página atualizada (`index.html`).
+- UI/UX
+
 ### v1.5.0 - Funcionalidade de criar
 - Funcionalidade para criação de novas tarefas.
 - Refatoração de Lógica (`app.js`).
@@ -54,3 +59,6 @@ Este projeto tem como objetivo consolidar conhecimentos básicos em **CRUD** (Cr
 
 ---
 *Desenvolvido por [Vinicius]*
+
+
+
