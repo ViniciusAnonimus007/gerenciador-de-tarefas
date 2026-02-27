@@ -1,0 +1,185 @@
+/* Importando uma fonte moderna do Google */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --low: #22c55e;
+  --mid: #f59e0b;
+  --high: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Área de Criação de Tarefas */
+.container_create {
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.task_create_container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task_create div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+}
+
+input, select {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+#create_button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#create_button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Container de Tarefas Listadas */
+.tasks_container {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Exemplo de estilo para as tarefas que você criará via JS */
+.task_item {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 5px solid var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+
+/* Estilo do Card de Tarefa */
+.taskView {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 6px solid var(--primary);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  transition: transform 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.taskView:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.taskView h3 {
+  color: var(--text-main);
+  font-size: 1.2rem;
+  margin-right: 80px; /* Espaço para o botão */
+}
+
+.taskView p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Estilo do Botão Deletar dentro do Card */
+.delete_button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #fee2e2;
+  color: var(--high);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete_button:hover {
+  background-color: var(--high);
+  color: white;
+}
