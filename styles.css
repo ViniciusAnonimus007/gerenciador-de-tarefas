@@ -98,7 +98,7 @@ input:focus, select:focus {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 #create_button:hover {
@@ -112,32 +112,12 @@ input:focus, select:focus {
   margin-bottom: 20px;
 }
 
-/* Exemplo de estilo para as tarefas que você criará via JS */
-.task_item {
-  background: white;
-  padding: 16px;
-  border-radius: 8px;
-  border-left: 5px solid var(--primary);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-/* Responsividade */
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
-}
-
 
 /* Estilo do Card de Tarefa */
 .taskView {
   background: var(--card-bg);
   padding: 20px;
   border-radius: 12px;
-  border-left: 6px solid var(--primary);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;

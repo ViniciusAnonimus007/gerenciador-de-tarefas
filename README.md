@@ -15,12 +15,14 @@ Este projeto tem como objetivo consolidar conhecimentos básicos em **CRUD** (Cr
   - 🔴 **Vermelho** (Alta)
 - [x] Cards com borda colorida baseada na importância.
 
-## 📁 Estrutura do Projeto
-- `task.js`: Define a classe/formato da tarefa (título, descrição, importância, data).
-- `render.js`: Responsável pela renderização das tarefas no DOM.
-- `app.js` (ou principal): Lógica do CRUD.
-
 ## 🛠️ Versionamento
+
+### v1.6.4 Estrutura atualizada
+- Atualização da estrutura do projeto.
+- Arquivos refatorados e redistribuidos.
+- Arquivo (`render.js`) apagado por não ser ter utilidades, visando que o arquivo (`taskCreate.js`) é mais escalavel.
+- Documento readme.md não possui mais a estrutura do projeto.
+- Pequenas alterações na UI/UX, cada tarefa recebe uma cor relacionada a sua importância.
 
 ### v1.6.0 - IU/UX Layout Profisório
 - Formatação da página usando css.
