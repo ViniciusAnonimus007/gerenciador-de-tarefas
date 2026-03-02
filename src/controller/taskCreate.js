@@ -16,15 +16,15 @@ export function taskCreate(taskList, title, description, importance) {
 
   switch (importance) {
     case 'low': 
-      $div.style.borderLeft = '6px solid green';
+      $div.style.borderLeft = '6px solid #56c743';
       break;
     
     case 'mid':
-      $div.style.borderLeft = '6px solid yellow';
+      $div.style.borderLeft = '6px solid #edef00';
       break;
     
     case 'high':
-      $div.style.borderLeft = '6px solid red';
+      $div.style.borderLeft = '6px solid #ec2300';
       break;
   
     default:

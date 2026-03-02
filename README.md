@@ -17,6 +17,11 @@ Este projeto tem como objetivo consolidar conhecimentos básicos em **CRUD** (Cr
 
 ## 🛠️ Versionamento
 
+### v1.6.5 Pequenas alterações gráficas
+- Os campos são limpos quando uma nova tarefa é criada.
+- As cores do card de tarefa são mais agradáveis.
+- Opção _"Não selecionado"_ como padrão (`index.html`).
+
 ### v1.6.4 Estrutura atualizada
 - Atualização da estrutura do projeto.
 - Arquivos refatorados e redistribuidos.
