@@ -3,7 +3,7 @@ import { taskCreate } from './controller/taskCreate.js';
 import { taskDelete } from './controller/taskDelete.js';
 
 const $taskContainer = document.querySelector('.tasks_container');
-const $createButton = document.querySelector('#create_button'):
+const $createButton = document.querySelector('#create_button');
 
 taskDelete($taskContainer);
 
