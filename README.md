@@ -3,6 +3,8 @@
 ## 🎯 Objetivo
 Este projeto tem como objetivo consolidar conhecimentos básicos em **CRUD** (Create, Read, Update, Delete) utilizando JavaScript puro. O foco é a manipulação do DOM e estruturação de dados.
 
+- Objetivo atual: login/cadastro de usuários usando Local Storage.
+
 *Nota: Este é um projeto de aprendizado, com potencial para evolução futura.*
 
 ## 🚀 Funcionalidades
