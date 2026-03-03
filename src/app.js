@@ -1,4 +1,3 @@
-import Task from './models/task.js';
 import { taskCreate } from './controller/taskCreate.js';
 import { taskDelete } from './controller/taskDelete.js';
 
