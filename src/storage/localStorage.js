@@ -1,7 +1,7 @@
 export function load(key) {
   const res = localStorage.getItem(key);
-  
-  if(!res) {
+
+  if(res != null) {
     return JSON.parse(res);
   }
   
@@ -12,9 +12,10 @@ export function load(key) {
 };
 
 export function save(key, data) {
-  const database = load(key);
+  let database = load(key);
   
-  database.push(JSON.stringify(data));
+  database.push(data);
+  database = JSON.stringify(database);
   
   localStorage.setItem(key, database);
-}
+};
