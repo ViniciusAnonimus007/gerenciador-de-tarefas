@@ -10,7 +10,7 @@ export function load(key) {
   };
   
 };
-
+ 
 export function save(key, data) {
   let database = load(key);
   
