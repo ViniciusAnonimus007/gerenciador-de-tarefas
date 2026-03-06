@@ -4,7 +4,7 @@
 :root {
   --primary: #4f46e5;
   --primary-hover: #4338ca;
-  --bg-color: #f8fafc;
+  --bg-color: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   --card-bg: #ffffff;
   --text-main: #1e293b;
   --text-muted: #64748b;
@@ -12,6 +12,7 @@
   --low: #22c55e;
   --mid: #f59e0b;
   --high: #ef4444;
+  --accent: #06b6d4;
 }
 
 * {
@@ -22,7 +23,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--bg-color);
+  background: var(--bg-color);
   color: var(--text-main);
   line-height: 1.6;
   display: flex;
@@ -35,12 +36,31 @@ body {
 header {
   margin-bottom: 30px;
   text-align: center;
+  animation: fadeIn 1s ease-in;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  background: #64748b;
 }
 
 header h1 {
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--primary);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1::before {
+  content: "📋 ";
 }
 
 .container {
@@ -53,8 +73,20 @@ header h1 {
   background: var(--card-bg);
   padding: 24px;
   border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(79, 70, 229, 0.1);
   margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container_create::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
 }
 
 .task_create_container {
@@ -98,11 +130,19 @@ input:focus, select:focus {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#create_button::before {
+  content: "➕ ";
 }
 
 #create_button:hover {
   background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(79, 70, 229, 0.3);
 }
 
 /* Container de Tarefas Listadas */
@@ -113,7 +153,6 @@ input:focus, select:focus {
 }
 
 
-/* Estilo do Card de Tarefa */
 .taskView {
   background: var(--card-bg);
   padding: 20px;
@@ -123,8 +162,22 @@ input:focus, select:focus {
   flex-direction: column;
   gap: 8px;
   position: relative;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   margin-bottom: 16px;
+  animation: fadeIn 0.5s ease-in;
+  border-left: 4px solid var(--primary);
+}
+
+.taskView.priority-low {
+  border-left-color: var(--low);
+}
+
+.taskView.priority-mid {
+  border-left-color: var(--mid);
+}
+
+.taskView.priority-high {
+  border-left-color: var(--high);
 }
 
 .taskView:hover {
@@ -159,7 +212,47 @@ input:focus, select:focus {
   transition: all 0.2s;
 }
 
+.delete_button::before {
+  content: "🗑️ ";
+}
+
 .delete_button:hover {
   background-color: var(--high);
   color: white;
+  transform: scale(1.05);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.taskView {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .taskView h3 {
+    font-size: 1rem;
+  }
 }
