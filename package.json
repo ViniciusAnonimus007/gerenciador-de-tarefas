@@ -1,0 +1,21 @@
+{
+  "name": "gerenciador-de-tarefas",
+  "version": "1.0.0",
+  "description": "Este projeto tem como objetivo consolidar conhecimentos básicos em **CRUD** (Create, Read, Update, Delete) utilizando JavaScript puro. O foco é a manipulação do DOM e estruturação de dados.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViniciusAnonimus007/gerenciador-de-tarefas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ViniciusAnonimus007/gerenciador-de-tarefas/issues"
+  },
+  "homepage": "https://github.com/ViniciusAnonimus007/gerenciador-de-tarefas#readme"
+}
