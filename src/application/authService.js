@@ -1,32 +1,45 @@
 import * as storage from '../storage/localStorage.js';
 
-const defaultUser = { user: 'admin', password: 'admin' };
-
-storage.save('users', defaultUser);
+const $message = document.querySelector('#message');
 
 console.log(storage.load('users'));
 
 function auth() {
-  const user = document.querySelector('#user');
-  const password = document.querySelector('#password');
+  const userLog = document.querySelector('#user').value;
+  const passLog = document.querySelector('#password').value;
   const usersList = storage.load('users')
   
-  usersList.forEach((_user) => {
-    console.log(`usuario: ${_user.user} senha: ${_user.password}`)
+
+  const user = usersList.find((_user) => {
+    return _user.user == userLog && _user.password == passLog;
   })
+
+  console.log(user)
+
+  if(!user) {
+    $message.textContent = 'Usuario ou senha incorretos ou não cadastrados';
+  }
+
+  else {
+    $message.textContent = `Usuario: ${user.user} Senha: ${user.password}`;
+    storage.sessionUser('session', user.userID, self.crypto.randomUUID());
+
+    
+    setTimeout(() => {
+      window.location.href = './tasks.html';
+    }, 1000);
+
+  }
+
   
 }
 
 
-auth();
-
 const $send = document.querySelector('#send');
 
 $send.addEventListener('click', (e) => {
-  
   e.preventDefault();
   
-  console.log('a função é chamada')
-  
+  auth();
   
 })
