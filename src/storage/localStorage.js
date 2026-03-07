@@ -19,3 +19,12 @@ export function save(key, data) {
   
   localStorage.setItem(key, database);
 };
+
+export function sessionUser(key, userID, token) {
+  localStorage.setItem(key, JSON.stringify({userID: userID, token: token}));
+  console.log(`Operação feita com sucesso`);
+  const session = localStorage.getItem('session');
+  console.log(session);
+
+  setTimeout(() => { localStorage.setItem(key, 'sem sessão'); console.log('sessão finalizada')}, 10000);
+};
