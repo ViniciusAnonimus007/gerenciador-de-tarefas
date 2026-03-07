@@ -19,6 +19,12 @@ Este projeto tem como objetivo consolidar conhecimentos básicos em **CRUD** (Cr
 
 ## 🛠️ Versionamento
 
+### v1.6.7 - Melhorias gerais, correção de bugs e banco de dados atualizado
+- Laytout da página de tarefas atualizada para uma melhor experiência do usuário.
+- Melhorias na responsividade da página.
+- Bugs Corrigidos relacionados a criação e deleção de tarefas.
+- Banco de dados atualizado para o local storage, permitindo que as tarefas sejam salvas mesmo após o fechamento da página. 
+
 ### v1.6.5 Pequenas alterações gráficas
 - Os campos são limpos quando uma nova tarefa é criada.
 - As cores do card de tarefa são mais agradáveis.
