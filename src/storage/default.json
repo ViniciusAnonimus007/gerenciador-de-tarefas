@@ -1,0 +1,143 @@
+{
+  "users": [
+    {
+      "user": "carlos",
+      "password": "helena2021",
+      "userID": "7f3c4a8e-9d2b-4b7a-8c1e-6f0a2d9c5b41",
+      "role": "user",
+      "tasks": [
+        {
+          "taskID": "1a8e3f52-4c1b-4e99-9c21-7c4e2d19f3a0",
+          "title": "Carnaval",
+          "description": "Evento mundano",
+          "importance": "low",
+          "data": "13:00 02/02/2026"
+        }
+      ]
+    },
+    {
+      "user": "mariana",
+      "password": "mar2024",
+      "userID": "c1a8e6f0-3b2d-4a7c-9e51-2f6d8b4a9c03",
+      "role": "user",
+      "tasks": [
+        {
+          "taskID": "7d4b2e91-6f53-4f1d-a2a7-0d6a8b5c1e92",
+          "title": "Estudar redes",
+          "description": "Revisar modelo OSI",
+          "importance": "high",
+          "data": "19:00 10/03/2026"
+        },
+        {
+          "taskID": "c3a6f41e-9b52-4d88-b0a7-3e1c6d7f9a12",
+          "title": "Comprar material",
+          "description": "Caderno e canetas",
+          "importance": "low",
+          "data": "16:30 11/03/2026"
+        }
+      ]
+    },
+    {
+      "user": "joao",
+      "password": "joaotech",
+      "userID": "9b7d5e12-6a3c-4f8b-b2d9-1c0e7a5f4d63",
+      "role": "user",
+      "tasks": [
+        {
+          "taskID": "5e92d3c7-3f5e-4f9e-8c5b-6c3a9e1d4f10",
+          "title": "Treino",
+          "description": "Academia após o trabalho",
+          "importance": "mid",
+          "data": "18:00 09/03/2026"
+        },
+        {
+          "taskID": "9b81d7e0-1f2c-4c54-8c5d-8f1e7b6a2c44",
+          "title": "Projeto site",
+          "description": "Finalizar página de login",
+          "importance": "high",
+          "data": "22:00 09/03/2026"
+        },
+        {
+          "taskID": "c0e3b57a-2b4d-4c8c-9d3a-4e7f0c1d2a90",
+          "title": "Assistir filme",
+          "description": "Relaxar no fim do dia",
+          "importance": "low",
+          "data": "23:30 09/03/2026"
+        }
+      ]
+    },
+    {
+      "user": "lucas",
+      "password": "lucas123",
+      "userID": "2e4a9c7b-5d1f-4a3e-8b62-0f9c6d1e7a58",
+      "role": "user",
+      "tasks": [
+        {
+          "taskID": "8d7a4f3b-0c6e-4f1a-b2e4-5a1f9e6d7b30",
+          "title": "Reunião",
+          "description": "Discussão do projeto da empresa",
+          "importance": "high",
+          "data": "09:00 12/03/2026"
+        }
+      ]
+    },
+    {
+      "user": "ana",
+      "password": "ana_dev",
+      "userID": "d6f0b3a1-8c4e-4d79-a2b5-5e1c9f7a3d24",
+      "role": "user",
+      "tasks": [
+        {
+          "taskID": "e2a7b9c1-4f6a-4c21-b7c4-0f2a9e1d6b52",
+          "title": "Ler livro",
+          "description": "Capítulos 3 e 4",
+          "importance": "mid",
+          "data": "20:30 08/03/2026"
+        },
+        {
+          "taskID": "4c8b2d71-7a5c-4d20-a9e5-6f2b1c8e3d14",
+          "title": "Organizar mesa",
+          "description": "Limpar espaço de estudo",
+          "importance": "low",
+          "data": "21:00 08/03/2026"
+        },
+        {
+          "taskID": "9e3c7f21-2a4d-4e80-8d9f-7a1c3b5d6f72",
+          "title": "Preparar apresentação",
+          "description": "Slides para aula",
+          "importance": "high",
+          "data": "14:00 11/03/2026"
+        },
+        {
+          "taskID": "f7a5c9e2-3b1d-4a91-8c0f-2e6b7d4a5c88",
+          "title": "Responder emails",
+          "description": "Pendências da semana",
+          "importance": "mid",
+          "data": "10:00 12/03/2026"
+        }
+      ]
+    },
+    {
+      "user": "admin",
+      "password": "root_master",
+      "userID": "4b2e91d0-6a5c-4c3f-a8d2-9e7b1c0f3a66",
+      "role": "admin",
+      "tasks": [
+        {
+          "taskID": "1d9c3e72-6a5b-4f3d-9c1e-7a4b2d6e8f90",
+          "title": "Backup do sistema",
+          "description": "Salvar banco de dados",
+          "importance": "high",
+          "data": "02:00 09/03/2026"
+        },
+        {
+          "taskID": "7b3e1a9c-4f5d-4a2b-b6e1-0c9d3f2a8e61",
+          "title": "Revisar usuários",
+          "description": "Checar contas registradas",
+          "importance": "mid",
+          "data": "11:00 09/03/2026"
+        }
+      ]
+    }
+  ]
+}
