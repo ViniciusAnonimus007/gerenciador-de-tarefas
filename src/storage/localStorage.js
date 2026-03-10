@@ -6,7 +6,7 @@ export function load(key) {
   }
   
   else {
-    return [];
+    return []
   };
   
 };
@@ -28,3 +28,9 @@ export function sessionUser(key, userID, token) {
 
   setTimeout(() => { localStorage.setItem(key, 'sem sessão'); console.log('sessão finalizada')}, 10000);
 };
+
+
+export function setDefault(key, data) {
+  let dataDefault = JSON.stringify(data);
+  localStorage.setItem(key, dataDefault);
+}

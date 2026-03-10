@@ -1,34 +1,41 @@
 import * as storage from '../storage/localStorage.js';
+import { usersDefault } from '../storage/default.js';
+
 
 const $message = document.querySelector('#message');
 
 console.log(storage.load('users'));
 
 function auth() {
-  const userLog = document.querySelector('#user').value;
-  const passLog = document.querySelector('#password').value;
-  const usersList = storage.load('users')
+  try {
+    const userLog = document.querySelector('#user').value;
+    const passLog = document.querySelector('#password').value;
+    const usersList = storage.load('users')
   
 
-  const user = usersList.find((_user) => {
+    const user = usersList.find((_user) => {
     return _user.user == userLog && _user.password == passLog;
-  })
+    })
 
-  console.log(user)
+    console.log(user)
 
-  if(!user) {
-    $message.textContent = 'Usuario ou senha incorretos ou não cadastrados';
-  }
+    if(!user) {
+      $message.textContent = 'Usuario ou senha incorretos ou não cadastrados';
+    }
 
-  else {
-    $message.textContent = `Usuario: ${user.user} Senha: ${user.password}`;
-    storage.sessionUser('session', user.userID, self.crypto.randomUUID());
+    else {
+      $message.textContent = `Usuario: ${user.user} Senha: ${user.password}`;
+      storage.sessionUser('session', user.userID, self.crypto.randomUUID());
 
     
-    setTimeout(() => {
+      setTimeout(() => {
       window.location.href = './tasks.html';
-    }, 1000);
-
+      }, 1000);
+    }
+  }
+  
+  catch(error) {
+    console.log('error')
   }
 
   
@@ -41,5 +48,5 @@ $send.addEventListener('click', (e) => {
   e.preventDefault();
   
   auth();
-  
+  usersDefault();
 })
