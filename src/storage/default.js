@@ -6,16 +6,15 @@ export async function defaultUsers() {
     const res = await fetch('../src/storage/default.json');
     let defaultUsers = await res.json();
     
-    console.log(defaultUsers)
     if(!users || users.length === 0) {
       
       let dataUsers = [];
       defaultUsers.users.forEach((user) => {
         dataUsers.push(user);
-      })
+      });
       
       storage.setDefault('users', dataUsers);
-      console.log('novos usuários');
+      console.log('Usuarios Padrão');
       console.log(storage.load('users'))
       return;
     }

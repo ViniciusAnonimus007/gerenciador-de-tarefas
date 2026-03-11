@@ -1,20 +1,20 @@
 import * as storage from '../storage/localStorage.js';
 import { defaultUsers } from '../storage/default.js';
+import { clearCamp } from '../utils/clearCamp.js';
+
 defaultUsers();
 
+const fields = document.querySelectorAll('input');
 const KEY_USERS = 'users';
 const $message = document.querySelector('#message');
 
-console.log(storage.load(KEY_USERS));
-
-
 function auth() {
   try {
-    const userLog = document.querySelector('#user').value;
-    const passLog = document.querySelector('#password').value;
+    const userLog = document.querySelector('#user').value.trim().toLowerCase();
+    const passLog = document.querySelector('#password').value.trim().toLowerCase();
     const users = storage.load(KEY_USERS);
   
-
+  
     const foundUser = users.find((u) => {
     return u.user == userLog && u.password == passLog;
     });
@@ -37,12 +37,9 @@ function auth() {
   };
 };
 
-
 const $send = document.querySelector('#send');
-
 $send.addEventListener('click', (e) => {
   e.preventDefault();
-
   auth();
-  console.log(storage.load(KEY_USERS));
+  clearCamp(fields);
 })
