@@ -1,52 +1,48 @@
 import * as storage from '../storage/localStorage.js';
-import { usersDefault } from '../storage/default.js';
+import { defaultUsers } from '../storage/default.js';
+defaultUsers();
 
-
+const KEY_USERS = 'users';
 const $message = document.querySelector('#message');
 
-console.log(storage.load('users'));
+console.log(storage.load(KEY_USERS));
+
 
 function auth() {
   try {
     const userLog = document.querySelector('#user').value;
     const passLog = document.querySelector('#password').value;
-    const usersList = storage.load('users')
+    const users = storage.load(KEY_USERS);
   
 
-    const user = usersList.find((_user) => {
-    return _user.user == userLog && _user.password == passLog;
-    })
-
-    console.log(user)
-
-    if(!user) {
-      $message.textContent = 'Usuario ou senha incorretos ou não cadastrados';
-    }
-
-    else {
-      $message.textContent = `Usuario: ${user.user} Senha: ${user.password}`;
-      storage.sessionUser('session', user.userID, self.crypto.randomUUID());
-
+    const foundUser = users.find((u) => {
+    return u.user == userLog && u.password == passLog;
+    });
     
-      setTimeout(() => {
+    if(!foundUser) {
+      $message.textContent = 'Usuario ou senha incorretos ou não cadastrados';
+      return;
+    };
+    
+    
+    const {user: userName, password, userID: id} = foundUser;
+    
+    $message.textContent = `Usuario: ${userName} Senha: ${password}`;
+      storage.sessionUser('session', id, self.crypto.randomUUID());
       window.location.href = './tasks.html';
-      }, 1000);
-    }
   }
   
   catch(error) {
-    console.log('error')
-  }
-
-  
-}
+    console.error(`Erro tentar logar: ${error.message}`);
+  };
+};
 
 
 const $send = document.querySelector('#send');
 
 $send.addEventListener('click', (e) => {
   e.preventDefault();
-  
+
   auth();
-  usersDefault();
+  console.log(storage.load(KEY_USERS));
 })

@@ -1,6 +1,6 @@
 import * as storage from './localStorage.js';
 
-export async function usersDefault() {
+export async function defaultUsers() {
   try {
     const users = storage.load('users');
     const res = await fetch('../src/storage/default.json');
