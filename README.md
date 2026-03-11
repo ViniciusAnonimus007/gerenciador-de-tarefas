@@ -18,6 +18,11 @@ Este projeto tem como objetivo consolidar conhecimentos básicos em **CRUD** (Cr
 - [x] Cards com borda colorida baseada na importância.
 
 ## 🛠️ Versionamento
+### v1.7.0 - Autenticação e Padronização de usuários
+- Adiciona serviço de Autenticação de usuários atribuído ao localStorage.
+- Persistência com usuários padrão caso não haja nenhum cadastrado.
+- Refatoração de código, melhorias de sintaxe e escalabilidade.
+- Utilidades básicas como limpar campos, adicionada.
 
 ### v1.6.7 - Melhorias gerais, correção de bugs e banco de dados atualizado
 - Laytout da página de tarefas atualizada para uma melhor experiência do usuário.
