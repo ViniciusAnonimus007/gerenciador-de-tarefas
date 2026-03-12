@@ -17,7 +17,13 @@ Este projeto tem como objetivo consolidar conhecimentos básicos em **CRUD** (Cr
   - 🔴 **Vermelho** (Alta)
 - [x] Cards com borda colorida baseada na importância.
 
+
 ## 🛠️ Versionamento
+
+### v1.7.2 - Corrige caminhos de arquivos e Deploy
+- a página de login foi renomeada como index para ter compatibilidade com o deploy na vercel.
+- corrige caminhos das páginas de acordo com a nova estrutura.
+
 ### v1.7.0 - Autenticação e Padronização de usuários
 - Adiciona serviço de Autenticação de usuários atribuído ao localStorage.
 - Persistência com usuários padrão caso não haja nenhum cadastrado.
