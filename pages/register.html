@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+<head lang="pt-br">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <link rel="stylesheet" href="../styles/register.css">
+  <title>Cadastro</title>
 </head>
-
 <body>
+  <header>
+    <h1>Cadastro</h1>
+  </header>
   
+  <main>
+    <div class="container">
+      <div class="register_payload">
+        <form id="form_register">
+          
+          <div class="field">
+            <label for="userName">Usuário</label>
+            <input type="text" name="userName" id="user" required>
+          </div>
+                    
+          <div class="field">
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" required>
+          </div>
+                    
+          <button type="submit" id="send">Criar</button>
+          </form>
+                
+          <p id="message"></p>
+                
+          </div>
+        </div>
+  </main>
 </body>
-
 </html>
