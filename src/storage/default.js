@@ -14,8 +14,6 @@ export async function defaultUsers() {
       });
       
       storage.setDefault('users', dataUsers);
-      console.log('Usuarios Padrão');
-      console.log(storage.load('users'))
       return;
     }
   }
