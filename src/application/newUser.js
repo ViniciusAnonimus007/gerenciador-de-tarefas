@@ -30,7 +30,7 @@ function newUser() {
     
     storage.sessionUser(KEY_SESSION, user.userID, self.crypto.randomUUID());
     
-    window.location.href = './tasks.html';
+    window.location.href = './pages/tasks.html';
   }
   
   catch(error) {
