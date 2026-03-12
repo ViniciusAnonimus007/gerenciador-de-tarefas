@@ -26,7 +26,7 @@ export function sessionUser(key, userID, token) {
   const session = localStorage.getItem('session');
   console.log(session);
 
-  setTimeout(() => { localStorage.setItem(key, 'sem sessão'); console.log('sessão finalizada')}, 10000);
+  setTimeout(() => { localStorage.setItem(key, 'sem sessão'); console.log('sessão finalizada')}, 100);
 };
 
 
