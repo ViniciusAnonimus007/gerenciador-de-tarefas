@@ -29,7 +29,7 @@ function auth() {
     
     $message.textContent = `Usuario: ${userName} Senha: ${password}`;
       storage.sessionUser('session', id, self.crypto.randomUUID());
-      window.location.href = './tasks.html';
+      window.location.href = './pages/tasks.html';
   }
   
   catch(error) {
