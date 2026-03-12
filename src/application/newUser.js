@@ -3,29 +3,33 @@ import { clearCamp } from '../utils/clearCamp.js';
 import { defaultUsers } from '../storage/default.js';
 
 defaultUsers();
-
+const KEY_SESSION = 'session';
 const KEY_USERS = 'users';
 const $message = document.querySelector('#message');
 const $send = document.querySelector('#send');
 
 function newUser() {
   try {
-    const user = document.querySelector('#user').value;
+    const userName = document.querySelector('#user').value;
     const password = document.querySelector('#password').value;
   
     let users = storage.load(KEY_USERS);
-    if(!user || !password) {
+    if(!userName || !password) {
       $message.textContent = 'preencha todos os campos'; 
       return;
     };
-    
-    users.push({
-      user: user, 
+    const user = {
+      user: userName, 
       password: password,
       userID: self.crypto.randomUUID(),
       role: 'user',
-      task: []
-    });
+      tasks: []
+    };
+    
+    users.push(user);
+    
+    storage.sessionUser(KEY_SESSION, user.userID, self.crypto.randomUUID());
+    
     window.location.href = './tasks.html';
   }
   
